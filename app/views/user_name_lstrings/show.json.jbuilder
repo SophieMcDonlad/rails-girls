@@ -1,0 +1,1 @@
+json.partial! "user_name_lstrings/user_name_lstring", user_name_lstring: @user_name_lstring

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @user_name_lstring.body %>
+</p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @user_name_lstring.idea_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_name_lstring_path(@user_name_lstring) %> |
+<%= link_to 'Back', user_name_lstrings_path %>

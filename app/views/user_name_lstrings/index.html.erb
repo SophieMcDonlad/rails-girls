@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Name Lstrings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Idea</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_name_lstrings.each do |user_name_lstring| %>
+      <tr>
+        <td><%= user_name_lstring.body %></td>
+        <td><%= user_name_lstring.idea_id %></td>
+        <td><%= link_to 'Show', user_name_lstring %></td>
+        <td><%= link_to 'Edit', edit_user_name_lstring_path(user_name_lstring) %></td>
+        <td><%= link_to 'Destroy', user_name_lstring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Name Lstring', new_user_name_lstring_path %>

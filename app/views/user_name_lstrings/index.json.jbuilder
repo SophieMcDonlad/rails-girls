@@ -1,0 +1,1 @@
+json.array! @user_name_lstrings, partial: 'user_name_lstrings/user_name_lstring', as: :user_name_lstring
