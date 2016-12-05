@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :comments
   resources :user_name_lstrings
   get 'pages/info'
