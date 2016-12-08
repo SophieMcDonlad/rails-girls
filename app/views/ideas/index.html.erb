@@ -1,15 +1,22 @@
-<h1>Listing ideas</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Listing Ideas</title>
+  </head>
+    <body>
+      <h1>Listing ideas</h1>
+          <table class="table">
+            <% @ideas.in_groups_of(3) do |group| %>
 
-<% @ideas.in_groups_of(3) do |group| %>
-  <div class="row">
-    <% group.compact.each do |idea| %>
-      <div class="col-md-4">
-
-        <!-- <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%> -->
-        <td><%= image_tag idea.picture_url(width:100) if idea.picture? %></td>
-        <h4><%= link_to idea.name, idea %></h4>
-        <%= idea.description %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+              <% group.compact.each do |idea| %>
+                <%= image_tag idea.picture_url, width: '600' if idea.picture.present? %>
+                  <!-- <%= link_to idea.name, idea %> -->
+                    <figcaption>
+                      <%= idea.description %>
+                    </figcaption>
+            <% end %>
+            <% end %>
+          </table>
+    </body>
+</html>
